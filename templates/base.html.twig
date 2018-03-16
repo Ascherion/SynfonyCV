@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>{% block title %}Site CV Johan Desplats{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/contrib/bootstrap/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/contrib/fontawesome/fontawesome-all.css')}}" />
+        <link rel="stylesheet" href="{{ asset('css/custom/style.css') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'components/sidebar.html.twig' %}
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+
+        <script src="{{ asset('js/contrib/jquery/jquery.js') }}"></script>
+        <script src="{{ asset('js/custom/script.js') }}"></script>
+        <script src="{{ asset('js/contrib/bootstrap/bootstrap.bundle.js') }}"></script>
+    </body>
+</html>
