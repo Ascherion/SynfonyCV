@@ -3,38 +3,40 @@
 {% block title %}Site CV Johan Desplats{% endblock %}
 
 {% block body %}
-<body>
-    <div id="main">     <!--Div contenant l'intégralitée du CV-->
 
-        <span style="font-size:30px; color: #2d2d2d; cursor:pointer; position: fixed; z-index: 2000;" onclick="openNav()">&#9776;</span>
+{% include 'components/sidebar.html.twig' %}
+
+    <div class="main" id="main">     <!--Div contenant l'intégralitée du CV-->
+
+        <span class="burgerBtn" onclick="openNav()">&#9776;</span>
         <!--Bouton hamburger-->
 
-        <div class="présentation row pb-5">
-            <div class="offset-1 col-10 pb-2 nom">
-                <h1 class="display-4" id="Etudes">Johan Desplats</h1>
-                <p class="offset-2 resume">APPRENTI DÉVELOPPEUR WEB</p>
+        <div class="présentation col-12 row pb-5 rowSansPaddingR">
+            <div class="offset-1 col-11 col-md-10 pb-2 nom">
+                <h1 class="display-4 animated slideInRight" id="Etudes">Johan Desplats</h1>
+                <p class="offset-2 resume animated slideInRight" >DÉVELOPPEUR WEB EN DEVENIR</p>
             </div>
-            <div class="offset-1 col-10 pt-4">
+            <div class="offset-1 col-11 col-md-10 pt-4">
                 <p class="text-muted sitation">"L'enthousiasme est à la base de tout progrès."</p>
                 <p class="offset-3">Henry Ford</p>
             </div>
         </div>
 
-        <div class="row mb-5 col-12">
-            <div class="offset-1 col-10 col-md-6">
+        <div class="row col-12 mb-5 rowSansPaddingR">
+            <div class="offset-1 col-11 col-md-6">
                 <h2 class="rubricTitle mb-4 petitNom">Cursus</h2>
                 <p class="cursusText">
                     <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Janvier 2018: </strong>
-                    Entrée en formation Développeur web - Aformac Limoges (87).
+                    Entrée en formation Développeur Web - Limoges (87).
                 </p>
                 <p class="cursusText">
                     <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2015 à 2017: </strong>
-                    Apprentissage et emploie en Maroquinerie - Compagnons du Devoir et du Tour de France
-                    - Maroquineries de Luxes (Hermes, Louis Vuitton, Weston et Dior).
+                    Apprentissage et emploi en Maroquinerie - Compagnons du Devoir et du Tour de France
+                    - Maroquinerie de Luxe (Hermes, Louis Vuitton, Weston et Dior).
                 </p>
                 <p class="cursusText">
                     <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2014 à 2015: </strong>
-                    Licence L1 Arts Plastiques - Universités Paris 1 Panthéon-Sorbonne (75).
+                    Licence L1 Arts Plastiques - Université Paris 1 Panthéon-Sorbonne (75).
                 </p>
                 <p class="cursusText mb-4">
                     <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2011 à 2014: </strong>
@@ -47,123 +49,94 @@
                 <p class="cursusText mb-4">
                     <i class="fas fa-caret-right fa-sm redArrow"></i><strong> Brevet des Collèges </strong>
                 </p>
+
+                <h2 class="rubricTitle mb-4 petitNom">Comptétences Obtenus</h2>
+                <div class="row col-12 rowCompetence">
+                    <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-4">
+                        <i class="fas fa-caret-right fa-sm redArrow"></i><strong>Design & Communication Visuelle</strong>
+                    </p>
+                    <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-4">
+                        <i class="fas fa-caret-right fa-sm redArrow"></i><strong>Érgonomie</strong>
+                    </p>
+                    <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-4">
+                        <i class="fas fa-caret-right fa-sm redArrow"></i><strong>Maquette Graphique</strong>
+                    </p>
+                </div>
             </div>
 
-            <div class="offset-1 col-10 col-md-3 row">
-                <h2 class="rubricTitle mb-4 col-12 petitNom">Compétences</h2>
-                <h4 class="subTitle mb-3 col-12 toutPetitNom">Technologies:</h4>
+            <div class="offset-1 col-11 col-md-3 row rowSansPaddingR">
+                <h2 class="rubricTitle mb-4 col-12 petitNom">Technologies</h2>
 
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> HTML5: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> CSS3: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> JS: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> MySQL: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Bootstrap: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Photoshop: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Git: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> PHP: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Symfony4: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Jquery: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
-                <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-6">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Ajax: </strong>
-                </p>
-                <p class="cursusText text-right col-2 col-sm-6 col-md-2 col-lg-6">
-                    Débutant
-                </p>
+                {% for i in skill %}
+                    <div class="row col-md-12 col-6 rowSansMargin">
+                        <p class="cursusText col-md-6 col-12">
+                            <strong class="redArrow"> {{ i.nom }}: </strong>
+                        </p>
+                        <p class="cursusText text-center skillStar offset-1 col-md-5 col-12">
+                            {% if i.niveau == 3 %}
+                                <i class="fas fa-star fa-sm"></i><i class="fas fa-star fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                            {% elseif i.niveau == 2 %}
+                                <i class="fas fa-star fa-sm"></i><i class="fas fa-star fa-sm"></i><i class="far fa-star fa-sm"></i>
+                            {% else %}
+                                <i class="fas fa-star fa-sm"></i><i class="far fa-star fa-sm"></i><i class="far fa-star fa-sm"></i>
+                            {% endif %}
+                        </p>
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
 
         <div classe="row col-12">
-            <div class="offset-1 col-10 mb-5">
+            <div class="offset-1 col-11 col-md-10">
                 <h2 class="rubricTitle mb-4 petitNom" id="Travaux">Travaux</h2>
                 <div class="row col-12">
                     <div class="card col-12 col-md-4 col-lg-3 m-4">
-                        <img class="card-img-top" src="image/vignettePong.png">
+                        <img class="card-img-top" src="image/vignetteUpload.png">
                         <div class="card-body">
-                            <h5 class="card-title toutPetitNom">PONG</h5>
-                            <p class="card-text">Premier jeu vidéo multijoueur local réalisé à base d'HTML, de CSS et de JS.</p>
-                            {# <a href="http://localhost/Projets%20Principaux/JeuVideal/TestPong/" class="btn btn-secondary">Jouer?</a> #}
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
-                        <img class="card-img-top" src="image/vignetteExplorer.png">
-                        <div class="card-body">
-                            <h5 class="card-title toutPetitNom">File Explorer</h5>
-                            <p class="card-text">Explorateur des fichiers et dossiers de la machine sur laquelle il est déployé. Première utilisation d'Ajax.</p>
-                            {# <a href="http://localhost/Projets%20Principaux/Explorateur/NavigateurBase/" class="btn btn-secondary">Tester?</a> #}
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
-                        <img class="card-img-top" src="image/vignetteForum.png">
-                        <div class="card-body">
-                            <h5 class="card-title toutPetitNom">Forum</h5>
-                            <p class="card-text">Projet type site forum basé sur les contraintes de design d'un autre groupe de la formation.</p>
-                            {# <a href="http://localhost/Projets%20Principaux/SiteChaisesMusicales/SiteForum/html/template_main.php" class="btn btn-secondary">Regarder?</a> #}
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
-                        <img class="card-img-top" src="image/vignetteBlog.png">
-                        <div class="card-body">
-                            <h5 class="card-title toutPetitNom">Blog</h5>
-                            <p class="card-text">Site type blog métant en page des posts contenu dans une base de donnée et permettant d'en ajouter des nouveaux.</p>
-                            {# <a href="http://localhost/Projets%20Principaux/BlogChatastrophique/" class="btn btn-secondary">Essayer?</a> #}
+                            <h5 class="card-title toutPetitNom">File Uploader</h5>
+
+                            <a href="" class="btn btn-secondary">Envoyer?</a>
                         </div>
                     </div>
                     <div class="card col-12 col-md-4 col-lg-3 m-4">
                         <img class="card-img-top" src="image/vignetteMeme.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Meme Generator</h5>
-                            <p class="card-text">Générateur de Meme (gags récurents d'internet) permettant de personnaliser une image et d'y intégrer un texte.</p>
-                            {# <a href="http://localhost/exoMeme/" class="btn btn-secondary">Créer?</a> #}
+
+                            <a href="" class="btn btn-secondary">Créer?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteBlog.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Blog</h5>
+
+                            <a href="" class="btn btn-secondary">Essayer?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteForum.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Forum</h5>
+
+                            <a href="" class="btn btn-secondary">Regarder?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteExplorer.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">File Explorer</h5>
+
+                            <a href="" class="btn btn-secondary">Tester?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignettePong.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">PONG</h5>
+
+                            <a href="" class="btn btn-secondary">Jouer?</a>
                         </div>
                     </div>
                 </div>
@@ -171,27 +144,33 @@
         </div>
 
         <div classe="row col-12">
-            <div class="offset-1 col-10 mb-5">
+            <div class="offset-1 col-11 col-md-10 mb-5">
+                <a href="/contact" class="btn btn-light text-center offset-4 col-3">Tous les Projets</a>
+            </div>
+        </div>
+
+        <div classe="row col-12">
+            <div class="offset-1 col-11 col-md-10 mb-5">
                 <h2 class="rubricTitle mb-4 petitNom" id="Langues">Langues</h2>
                 <p>Français</p>
-                <div class="skillContainer mb-3">
-                    <div class="skills francais">100%</div>
+                <div class="skillContainer mb-3 p-1">
+                    <div class="skills francais">98%</div>
                 </div>
 
                 <p>Anglais</p>
-                <div class="skillContainer mb-3">
+                <div class="skillContainer mb-3 p-1">
                     <div class="skills anglais">75%</div>
                 </div>
 
                 <p>Espagnol</p>
-                <div class="skillContainer mb-3">
+                <div class="skillContainer mb-3 p-1">
                     <div class="skills espagnol">50%</div>
                 </div>
             </div>
         </div>
 
         <div classe="row col-12 mb-5">
-            <div class="offset-1 col-10">
+            <div class="offset-1 col-11 col-md-10">
                 <h2 class="rubricTitle mb-4 petitNom" id="Interets">Centres d'Intérets</h2>
                 <div class="row col-12">
                     <div class="hobbicon col-6 col-sm-3 col-md-2 text-center">
@@ -221,7 +200,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-</body>
 {% endblock %}

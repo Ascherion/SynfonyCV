@@ -1,20 +1,107 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Tout les Travaux{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% include 'components/sidebar2.html.twig' %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>src/Controller/ContactController.php</code></li>
-        <li>Your template at <code>templates/contact/index.html.twig</code></li>
-    </ul>
-</div>
+    <div class="main" id="main">
+
+        <span class="burgerBtn" onclick="openNav()">&#9776;</span>
+        <!--Bouton hamburger-->
+
+        <div class="présentation col-12 row pb-5 rowSansPaddingR">
+            <div class="offset-1 col-11 col-md-10 pb-2 nom">
+                <h1 class="display-4 animated slideInRight" id="Etudes">Johan Desplats</h1>
+                <p class="offset-2 resume animated slideInRight" >DÉVELOPPEUR WEB EN DEVENIR</p>
+            </div>
+        </div>
+
+        <div classe="row col-12 contactTravaux">
+            <div class="offset-1 col-11 col-md-10">
+                <h2 class="rubricTitle mb-4 petitNom">Tout les Travaux</h2>
+                <div class="row col-12">
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteUpload.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">File Uploader</h5>
+                            <p class="card-text">Site permettant d'envoyer des fichiers de 3 à 7 Giga Octets sur une base de donnée pour, ensuite, les télécharger.<br />
+                            Durée du projet: 6 jours.<br />
+                            Membres du projets: 3 personnes.</p>
+                            <a href="" class="btn btn-secondary">Envoyer?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteMeme.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Meme Generator</h5>
+                            <p class="card-text">Générateur de Meme (gags récurents d'internet) permettant de personnaliser une image et d'y intégrer un texte.<br />
+                            Durée du projet: 4 jours.<br />
+                            Membres du projets: 3 personnes.</p>
+                            <a href="" class="btn btn-secondary">Créer?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteBlog.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Blog</h5>
+                            <p class="card-text">Site type blog métant en page des posts contenu dans une base de donnée et permettant d'en ajouter des nouveaux.<br />
+                            Durée du projet: 3 jours.<br />
+                            Membres du projets: 2 personnes.</p>
+                            <a href="" class="btn btn-secondary">Essayer?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteForum.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Forum</h5>
+                            <p class="card-text">Projet type site forum basé sur les contraintes de design d'un autre groupe de la formation.<br />
+                            Durée du projet: 3,5 jours.<br />
+                            Membres du projets: 2 personnes.</p>
+                            <a href="" class="btn btn-secondary">Regarder?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignetteExplorer.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">File Explorer</h5>
+                            <p class="card-text">Explorateur des fichiers et dossiers de la machine sur laquelle il est déployé. Première utilisation d'Ajax.<br />
+                            Durée du projet: 4 jours.<br />
+                            Membres du projets: 4 personnes.</p>
+                            <a href="" class="btn btn-secondary">Tester?</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/vignettePong.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">PONG</h5>
+                            <p class="card-text">Premier jeu vidéo multijoueur local réalisé à base d'HTML, de CSS et de JS.<br />
+                            Durée du projet: 3,5 jours.<br />
+                            Membres du projets: 5 personnes.</p>
+                            <a href="" class="btn btn-secondary">Jouer?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div classe="row col-12">
+            <div class="offset-1 col-10">
+                <h2 class="rubricTitle mb-4 petitNom" id="Travaux">Travaux en Cours</h2>
+                <div class="row col-12">
+                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+                        <img class="card-img-top" src="image/inProgress.png">
+                        <div class="card-body">
+                            <h5 class="card-title toutPetitNom">Présentation Aformac</h5>
+                            <p class="card-text">Site de présentation de la Promotion 404 et de la société Aformac Limoges (87).<br />
+                            Durée du projet: 6 jours.<br />
+                            Membres du projet: 13 personnes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

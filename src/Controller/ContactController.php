@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ContactController extends Controller
 {
     /**
-     * @Route("", name="contact")
+     * @Route("/contact", name="contact")
      */
     public function index()
     {
