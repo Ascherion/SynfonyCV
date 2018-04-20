@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Site CV Johan Desplats{% endblock %}
+{% block title %}Curriculum Vitae{% endblock %}
 
 {% block body %}
 
@@ -8,12 +8,19 @@
 
     <div class="main" id="main">     <!--Div contenant l'intégralitée du CV-->
 
-        <span class="burgerBtn" onclick="openNav()">&#9776;</span>
-        <!--Bouton hamburger-->
+
+
+        <div class="burgerBtn" onclick="openNav()">&#9776;</div>
+
+        <div class="text-right offset-1 col-11">
+            <div id="weather" class="sideSmText col-12"></div>
+            <p class="sideSmText col-12">Temperature: <span id="temp"></span></p>
+            <p class="sideSmText col-12">Météo: <span id="meteo"></span></p>
+        </div>
 
         <div class="présentation col-12 row pb-5 rowSansPaddingR">
             <div class="offset-1 col-11 col-md-10 pb-2 nom">
-                <h1 class="display-4 animated slideInRight" id="Etudes">Johan Desplats</h1>
+                <h1 class="display-4 animated slideInRight" id="Cursus">Johan Desplats</h1>
                 <p class="offset-2 resume animated slideInRight" >DÉVELOPPEUR WEB EN DEVENIR</p>
             </div>
             <div class="offset-1 col-11 col-md-10 pt-4">
@@ -91,7 +98,8 @@
             <div class="offset-1 col-11 col-md-10">
                 <h2 class="rubricTitle mb-4 petitNom" id="Travaux">Travaux</h2>
                 <div class="row col-12">
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignetteUpload.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">File Uploader</h5>
@@ -99,7 +107,8 @@
                             <a href="" class="btn btn-secondary">Envoyer?</a>
                         </div>
                     </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignetteMeme.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Meme Generator</h5>
@@ -107,7 +116,8 @@
                             <a href="" class="btn btn-secondary">Créer?</a>
                         </div>
                     </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignetteBlog.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Blog</h5>
@@ -115,7 +125,8 @@
                             <a href="" class="btn btn-secondary">Essayer?</a>
                         </div>
                     </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignetteForum.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Forum</h5>
@@ -123,7 +134,8 @@
                             <a href="" class="btn btn-secondary">Regarder?</a>
                         </div>
                     </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignetteExplorer.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">File Explorer</h5>
@@ -131,7 +143,8 @@
                             <a href="" class="btn btn-secondary">Tester?</a>
                         </div>
                     </div>
-                    <div class="card col-12 col-md-4 col-lg-3 m-4">
+
+                    <div class="card col-12 col-md-4 col-lg-3">
                         <img class="card-img-top" src="image/vignettePong.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">PONG</h5>
@@ -139,13 +152,14 @@
                             <a href="" class="btn btn-secondary">Jouer?</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
         <div classe="row col-12">
             <div class="offset-1 col-11 col-md-10 mb-5">
-                <a href="/contact" class="btn btn-light text-center offset-4 col-3">Tous les Projets</a>
+                <a href="/contact" class="btn btn-light text-center offset-md-4 col-md-3 col-11">Tous les Projets</a>
             </div>
         </div>
 

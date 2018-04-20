@@ -33,3 +33,16 @@ $(function() {
         }
     });
 });
+
+var weather = new XMLHttpRequest();
+weather.open("GET", "http://api.wunderground.com/api/34773823e5211b63/conditions/lang:FR/q/France/Limoges.json", false);
+weather.send(null);
+
+var r = JSON.parse(weather.response);
+var weather = "Localisation: " + r.current_observation.display_location.full;
+var temp = r.current_observation.temperature_string;
+var meteo = r.current_observation.weather;
+
+document.getElementById("weather").innerHTML = weather;
+document.getElementById("temp").innerHTML = temp;
+document.getElementById("meteo").innerHTML = meteo;
