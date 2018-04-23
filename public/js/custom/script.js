@@ -1,3 +1,6 @@
+
+/* OUVERTURE/FERMETURE SIDEBAR */
+
 var w = window.innerWidth;
 
 function openNav(){
@@ -16,10 +19,44 @@ function closeNav()
     document.getElementById("main").style.marginLeft= "0";
 }
 
+
+
+
+/* SIDEBAR: MENU ACCORDEON */
+
 $(function() {
-    /**
-    * Smooth scroll
-    **/
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+
+
+
+
+/* SMOOTH SCROLL */
+
+$(function() {
     $("a[href*='#']:not([href='#'])").click(function() {
         if (
             location.hostname == this.hostname

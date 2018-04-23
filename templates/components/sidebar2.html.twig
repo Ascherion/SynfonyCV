@@ -4,28 +4,23 @@
     </div>
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/" class="aPropos">Accueil</a>
 
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle dropdown-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Contact
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li>
-                <div class="col-12">
-                    <i class="fas fa-at fa-sm ml-3" style="color: #f1f1f1;"></i>
-                    <p class="ml-3" style="color: #818181;">johan.desplats@gmail.com</p>
-                </div>
-                <div class="col-12">
-                    <i class="fas fa-phone fa-sm ml-3" style="color: #f1f1f1;"></i>
-                    <p class="ml-3" style="color: #818181;">06 21 69 09 66</p>
-                </div>
-                <div class="col-12">
-                    <i class="fas fa-map-marker-alt fa-sm ml-3" style="color: #f1f1f1;"></i>
-                    <p class="ml-3" style="color: #818181;">122 avenue Montjovis 87100 Limoges</p>
-                </div>
-            </li>
+    <ul id="accordion" class="accordion">
+      <li>
+        <a href="/" class="link"><i class="fas fa-home"></i>Accueil</a>
+      </li>
+      <li>
+        <div class="link"><i class="fa fa-envelope"></i>Contact<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu">
+          <li>
+            <a class="nonClic">
+
+              <p class="colorWhite"></i>johan.desplats@gmail.com</p>
+              <p class="colorWhite">06 21 69 09 66</p>
+              <p class="colorWhite">122 avenue Montjovis 87100 Limoges</p>
+            </a>
+          </li>
         </ul>
-    </div>
+      </li>
+    </ul>
 </div>

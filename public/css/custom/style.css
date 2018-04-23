@@ -9,6 +9,13 @@ body {
     position: fixed;
     z-index: 2000;
     margin-left: 3px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.burgerBtn:hover {
+    color: #7a1111;
 }
 
 .sidenav {
@@ -24,36 +31,21 @@ body {
     padding-top: 60px;
 }
 
-.sidenav a, .dropdown-btn {
-    padding: 8px 8px 8px 32px;
+.sidenav a:hover{
+    color: white;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    cursor: pointer;
-    outline: none;
 }
 
-.sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+.closebtn {
+    top: 10px;
     position: absolute;
-    top: 0;
-    right: 25px;
+    right: 20px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-.dropdown-menu {
-    display: none;
-    background-color: #282828;
-    padding-left: 8px;
-    border: none;
-    font-size: 17px;
+    color: #818181;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .sideSmText {
@@ -96,10 +88,6 @@ body {
 .bouille {
     height: 220px;
     width: auto;
-}
-
-.aPropos {
-    margin-top: 75px;
 }
 
 .btn.focus, .btn:focus {
@@ -174,19 +162,139 @@ body {
     border-radius: 10px;
 }
 
-.anglais {width: 75%; background-color: #edbc2a;}
 .francais {width: 98%; background-color: #1e692d;}
+.anglais {width: 75%; background-color: #edbc2a;}
 .espagnol {width: 50%; background-color: #aa1414;}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul { list-style-type: none; }
+
+/** =======================
+ * Container Principal
+ ===========================*/
+
+
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #282828;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 50px;
+  color: #818181;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link { border-bottom: 0; }
+
+.accordion li i {
+  position: absolute;
+  top: 21px;
+  left: 16px;
+  font-size: 20px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 20px;
+  left: auto;
+  font-size: 20px;
+}
+
+.accordion li:hover .link { color: white; }
+
+.accordion li:hover i { color: white; }
+
+.accordion li:hover i.fa-chevron-down { color: white; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+ * Sous-Menus
+ */
+
+
+.submenu {
+  display: none;
+}
+
+.submenu li { border-bottom: 1px solid #282828; }
+
+.submenu a {
+  font-size: 19px;
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  padding: 10px;
+  padding-left: 20px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.submenu a:hover {
+  background: #7a1111;
+  color: white;
+}
+
+.accordion .link:hover {
+    color: white;
+}
+
+.colorWhite {
+    color: #818181;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.colorWhite:hover {
+    color: white;
+    cursor: default;
+}
+
+.nonClic {
+    cursor: default;
+}
 
 @media screen and (max-height: 670px) {
     .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
     .contact {font-size: 18px;}
-    .dropdown-btn {font-size: 18px;}
     .rubricTitle {font-size: 22px;}
     .subTitle {font-size: 19px;}
-    .aPropos {margin-top: 10px;}
-    .dropdown-menu {font-size: 14px;}
+    .accordion .link {font-size: 20px;}
+    .submenu a {font-size: 17px;}
+    .closebtn {font-size: 36px;}
+    .sideSmText {display: none;}
+    .disappear {display: none;}
 }
 
 @media screen and (max-width: 1030px) {
