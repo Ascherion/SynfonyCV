@@ -1,0 +1,16 @@
+@media screen and (max-height: 670px) {
+    .sidenav {padding-top: 15px;}
+    .contact {font-size: 18px;}
+    .rubricTitle {font-size: 22px;}
+    .subTitle {font-size: 19px;}
+    .accordion .link {font-size: 20px;}
+    .submenu a {font-size: 17px;}
+    .closebtn {font-size: 36px;}
+    .sideSmText {display: none;}
+    .disappear {display: none;}
+}
+
+@media screen and (max-width: 1030px) {
+    .rowSansMargin {padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0;}
+    .bouille {height: 140px;}
+}

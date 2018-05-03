@@ -1,0 +1,128 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.main {
+    transition: margin-left .5s;
+    padding: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.sideSmText {
+    color: $lightGrey;
+    padding: 0;
+    margin: 0;
+}
+
+.nom {
+    border-bottom: 3px solid $lightGrey;
+}
+
+.petitNom {
+    border-bottom: 2px solid #b1b1b1;
+}
+
+.toutPetitNom {
+    border-bottom: 1px solid #b1b1b1;
+}
+
+.resume {
+    color: $myRed;
+    font-size: 25px;
+}
+
+.redArrow {
+    color: $myRed;
+}
+
+.sitation {
+    font-size: 20px;
+}
+
+.bouille {
+    height: 220px;
+    width: auto;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: unset;
+}
+
+.btn-secondary {
+    background-color: $darkGrey;
+}
+
+.cursusText {
+    font-size: 18px;
+}
+
+.subTitle {
+    font-size: 20px;
+}
+
+.card {
+    border: none;
+}
+
+.fa-gamepad:hover {
+    color: $myRed;
+}
+
+.fa-film:hover {
+    color: #551987;
+}
+
+.fa-paint-brush:hover {
+    color: #1e692d;
+}
+
+.fa-rebel:hover {
+    color: #0087ff;
+}
+
+.fa-cogs:hover {
+    color: #4b230f;
+}
+
+.fa-chess:hover {
+    color: $lightGrey;
+}
+
+.rowCompetence {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.rowSansPaddingR {
+    padding-right: 0;
+}
+
+
+/**
+ * Jauges de Langues
+ */
+
+* {box-sizing:border-box}
+
+/**
+ * Container des jauges de langues
+ */
+
+.skillContainer {
+    width: 100%; /* Full width */
+    background-color: rgba(0,0,0,0.3); /* Grey background */
+    padding: none;
+    border-radius: 13px;
+}
+
+.skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    color: white;
+    border-radius: 10px;
+}
+
+.francais {width: 98%; background-color: #1e692d;}
+.anglais {width: 75%; background-color: #edbc2a;}
+.espagnol {width: 50%; background-color: #aa1414;}

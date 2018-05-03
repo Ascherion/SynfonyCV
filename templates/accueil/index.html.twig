@@ -32,33 +32,26 @@
         <div class="row col-12 mb-5 rowSansPaddingR">
             <div class="offset-1 col-11 col-md-6">
                 <h2 id="Cursus" class="rubricTitle mb-4 petitNom">Cursus</h2>
-                <p class="cursusText">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> Janvier 2018: </strong>
-                    Entrée en formation Développeur Web - Limoges (87).
-                </p>
-                <p class="cursusText">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2015 à 2017: </strong>
-                    Apprentissage et emploi en Maroquinerie - Compagnons du Devoir et du Tour de France
-                    - Maroquinerie de Luxe (Hermes, Louis Vuitton, Weston et Dior).
-                </p>
-                <p class="cursusText">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2014 à 2015: </strong>
-                    Licence L1 Arts Plastiques - Université Paris 1 Panthéon-Sorbonne (75).
-                </p>
-                <p class="cursusText mb-4">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> 2011 à 2014: </strong>
-                    Baccalauréat Sciences et Technologies du Design et des Arts Appliqués - Lycée Raymond Loewy La Souterraine (23).
-                </p>
-                <h2 class="rubricTitle mb-4 petitNom">Diplômes Obtenus</h2>
-                <p class="cursusText">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong> BAC STDAA. </strong>
-                </p>
-                <p class="cursusText mb-4">
-                    <i class="fas fa-caret-right fa-sm redArrow"></i><strong> Brevet des Collèges </strong>
-                </p>
 
-                <h2 class="rubricTitle mb-4 petitNom">Comptétences Obtenus</h2>
-                <div class="row col-12 rowCompetence">
+                {% for i in cursus|reverse %}
+                    <p class="cursusText">
+                        <i class="fas fa-caret-right fa-sm redArrow"></i><strong class="redArrow"> {{ i.year }}: </strong>
+                        {{ i.contenu }}
+                    </p>
+                {% endfor %}
+
+                <h2 class="rubricTitle my-4 petitNom">Diplômes Obtenus</h2>
+
+                <div class="row">
+                    {% for i in diplomes|reverse %}
+                        <p class="cursusText col-12 col-md-6">
+                            <i class="fas fa-caret-right fa-sm redArrow"></i><strong> {{ i.name }} </strong>
+                        </p>
+                    {% endfor %}
+                </div>
+
+                <h2 class="rubricTitle my-4 petitNom">Comptétences Obtenus</h2>
+                <div class="row">
                     <p class="cursusText col-12 col-sm-6 col-md-12 col-lg-4">
                         <i class="fas fa-caret-right fa-sm redArrow"></i><strong>Design & Communication Visuelle</strong>
                     </p>
@@ -70,6 +63,7 @@
                     </p>
                 </div>
             </div>
+
 
             <div class="offset-1 col-11 col-md-3 row rowSansPaddingR">
                 <h2 class="rubricTitle mb-4 col-12 petitNom">Technologies</h2>
@@ -103,7 +97,7 @@
                         <img class="card-img-top" src="image/vignettePromo.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Présentation Aformac</h5>
-                            <a href="" class="btn btn-secondary">Présenter?</a>
+                            <a href="http://localhost/Projets%20Principaux/exoPromo/" class="btn btn-secondary">Présenter?</a>
                         </div>
                     </div>
 
@@ -111,7 +105,7 @@
                         <img class="card-img-top" src="image/vignetteUpload.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">File Uploader</h5>
-                            <a href="" class="btn btn-secondary">Envoyer?</a>
+                            <a href="http://localhost/Projets%20Principaux/UploadFiles/" class="btn btn-secondary">Envoyer?</a>
                         </div>
                     </div>
 
@@ -119,7 +113,7 @@
                         <img class="card-img-top" src="image/vignetteMeme.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Meme Generator</h5>
-                            <a href="" class="btn btn-secondary">Créer?</a>
+                            <a href="http://localhost/exoMeme/" class="btn btn-secondary">Créer?</a>
                         </div>
                     </div>
 
@@ -127,7 +121,7 @@
                         <img class="card-img-top" src="image/vignetteBlog.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Blog</h5>
-                            <a href="" class="btn btn-secondary">Essayer?</a>
+                            <a href="http://localhost/Projets%20Principaux/BlogChatastrophique/" class="btn btn-secondary">Essayer?</a>
                         </div>
                     </div>
 
@@ -135,15 +129,15 @@
                         <img class="card-img-top" src="image/vignetteForum.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">Forum</h5>
-                            <a href="" class="btn btn-secondary">Regarder?</a>
+                            <a href="http://localhost/Projets%20Principaux/SiteChaisesMusicales/SiteForum/html/template_main.php" class="btn btn-secondary">Regarder?</a>
                         </div>
                     </div>
 
                     <div class="card col-12 col-md-4 col-lg-3 disappear">
-                        <img class="card-img-top" src="image/vignetteExplorer.png">
+                        <img class="card-img-top" src="image/VignetteSimpson.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">File Explorer</h5>
-                            <a href="" class="btn btn-secondary">Tester?</a>
+                            <a href="http://localhost/Projets%20Principaux/Explorateur/Navimpson/" class="btn btn-secondary">Tester?</a>
                         </div>
                     </div>
 
@@ -151,7 +145,7 @@
                         <img class="card-img-top" src="image/vignettePong.png">
                         <div class="card-body">
                             <h5 class="card-title toutPetitNom">PONG</h5>
-                            <a href="" class="btn btn-secondary">Jouer?</a>
+                            <a href="http://localhost/Projets%20Principaux/JeuVideal/TestPong/" class="btn btn-secondary">Jouer?</a>
                         </div>
                     </div>
 
